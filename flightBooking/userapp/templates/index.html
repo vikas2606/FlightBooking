@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+All Flights
+{% endblock %}
+
+{% block content %}
+<ul>
+    {% for flight  in flights %}
+    <li><a href="{% url 'flight-detail' flight.flight_id %}"><p>{{ flight.flight_id }} <br>
+        airline:{{ flight.airline_name }} <br> 
+        from:{{flight.from_location}} <br>
+        destination:{{ flight.to_location }}</p></li>
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

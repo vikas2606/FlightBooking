@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{ flight_id }} {{ airline_name }}
+{% endblock %}
+
+{% block content %}
+<h3>flight id: {{flight_id}}</h3>
+<h3>airline:{{airline_name}}</h3>
+<h3>from:{{from_location}}</h3>
+<h3>destination:{{to_location}}</h3>
+<h3>time of departure:{{departure}}</h3>
+<h3>date of departure:{{flight_departure_date}}</h3>
+<h3> {% if availble_seats == 0 %}
+    no seats availble 
+    {% else %}availble seats:{{availble_seats}}{% endif %}</h3>
+
+{% endblock %}
