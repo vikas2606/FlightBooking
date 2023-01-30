@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h6>{{firstclass_seats}}<h6>
+<div class="container">
+    
+    <form method="POST">
+        <fieldset>
+        <legend>Form</legend>
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit">submit</button>
+        </fieldset>
+    </form>
+</div>
+
+    {% endblock %}    
